@@ -1,3 +1,7 @@
-const fs = require('fs')
-//fs.writeFileSync('notes.txt', 'My name is Jelens')
-fs.appendFileSync('notes.txt', ' I am learning Node')
+const validator = require('validator')
+const getNotes = require('./notes.js')
+
+const message = getNotes()
+console.log(message);
+
+console.log(validator.isEmail('g.com'));
